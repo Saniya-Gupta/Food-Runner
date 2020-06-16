@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/imgSizeSmall"
+    android:layout_margin="@dimen/recyclerPadding"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/txtItemIndex"
+        style="@style/txtHead"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/marginLarge"
+        android:layout_weight="0.4"
+        android:textAlignment="center"
+        android:textSize="@dimen/txtSizeLarge"
+        tools:text="1" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:id="@+id/txtItemName"
+            style="@style/txtSubHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/txtSizeSmall"
+            tools:text="Mexican Steak" />
+
+        <TextView
+            android:id="@+id/txtItemCost"
+            style="@style/txtBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtItemName"
+            android:layout_marginTop="@dimen/margin"
+            android:textSize="@dimen/txtSizeSmall"
+            tools:text="Rs. 100" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/font_body"
+        android:paddingHorizontal="@dimen/padding"
+        android:text="@string/add_to_cart"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txtSize" />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/recyclerPadding"
+    app:cardCornerRadius="@dimen/radiusElevation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/txtRestaurantName"
+                style="@style/txtHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:padding="@dimen/padding"
+                android:textColor="@color/colorPrimary"
+                tools:text="KFC" />
+
+            <TextView
+                android:id="@+id/txtOrderDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingVertical="@dimen/padding"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/font_body"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txtSize"
+                tools:text="27/12/2000" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMenuItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llContent"
+            android:padding="@dimen/recyclerPadding" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

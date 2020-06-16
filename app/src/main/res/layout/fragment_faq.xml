@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/txtSubHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"
+            android:text="@string/ques1" />
+
+        <TextView
+            style="@style/txtBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:paddingHorizontal="@dimen/padding"
+            android:text="@string/ans1" />
+
+        <View
+            style="@style/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lineHeight"
+            android:layout_marginVertical="10dp" />
+
+
+        <TextView
+            style="@style/txtSubHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"
+            android:text="@string/ques2" />
+
+        <TextView
+            style="@style/txtBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:paddingHorizontal="@dimen/padding"
+            android:text="@string/ans2" />
+
+        <View
+            style="@style/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lineHeight"
+            android:layout_marginVertical="10dp" />
+
+
+        <TextView
+            style="@style/txtSubHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"
+            android:text="@string/ques3" />
+
+        <TextView
+            style="@style/txtBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:paddingHorizontal="@dimen/padding"
+            android:text="@string/ans3" />
+
+        <View
+            style="@style/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lineHeight"
+            android:layout_marginVertical="10dp" />
+
+
+        <TextView
+            style="@style/txtSubHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"
+            android:text="@string/ques4" />
+
+        <TextView
+            style="@style/txtBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:paddingHorizontal="@dimen/padding"
+            android:text="@string/ans4" />
+
+        <View
+            style="@style/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lineHeight"
+            android:layout_marginVertical="10dp" />
+
+
+        <TextView
+            style="@style/txtSubHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"
+            android:text="@string/ques5" />
+
+        <TextView
+            style="@style/txtBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:paddingHorizontal="@dimen/padding"
+            android:text="@string/ans5" />
+
+        <View
+            style="@style/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lineHeight"
+            android:layout_marginVertical="10dp" />
+
+    </LinearLayout>
+</ScrollView>

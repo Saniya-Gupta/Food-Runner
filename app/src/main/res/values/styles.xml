@@ -1,0 +1,73 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+        <item name="android:itemBackground">@color/colorPrimary</item>
+        <item name="android:itemTextAppearance">@style/txtItem</item>
+    </style>
+
+    <style name="txtItem">
+        <item name="android:fontFamily">@font/font_body</item>
+    </style>
+
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_light_sort</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+        <item name="android:contentDescription">"Sort"</item>
+    </style>
+
+    <style name="toolbarTitle">
+        <item name="android:fontFamily">@font/font_head</item>
+        <item name="android:textSize">@dimen/txtSizeLarge</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="et">
+        <item name="android:layout_marginTop">@dimen/marginLarge</item>
+        <item name="android:textSize">@dimen/txtSize</item>
+        <item name="android:background">@drawable/bg_et</item>
+        <item name="android:fontFamily">@font/font_body</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorBlack</item>
+    </style>
+
+    <style name="btn">
+        <item name="android:background">@drawable/bg_btn</item>
+        <item name="android:fontFamily">@font/font_body</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/txtSizeLarge</item>
+    </style>
+
+    <style name="txtHead">
+        <item name="android:fontFamily">@font/font_head</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/txtSizeLarge</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txtSubHead">
+        <item name="android:fontFamily">@font/font_body</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/txtSizeLarge</item>
+    </style>
+
+    <style name="txtBody">
+        <item name="android:fontFamily">@font/font_body</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/txtSize</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/lineHeight</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+</resources>

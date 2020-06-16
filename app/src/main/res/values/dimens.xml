@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="paddingLarge">16dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="marginLarge">16dp</dimen>
+    <dimen name="et_marginHorizontal">64dp</dimen>
+    <dimen name="marginTopBottom">48dp</dimen>
+    <dimen name="recyclerPadding">5dp</dimen>
+    <dimen name="radiusElevation">8dp</dimen>
+    <dimen name="txtSizeExtraLarge">32sp</dimen>
+    <dimen name="txtSizeLarge">24sp</dimen>
+    <dimen name="txtSize">18sp</dimen>
+    <dimen name="txtSizeSmall">16sp</dimen>
+    <dimen name="imgSizeLarge">140dp</dimen>
+    <dimen name="imgSizeSmall">80dp</dimen>
+    <dimen name="lineHeight">2dp</dimen>
+    <dimen name="lineHeightBold">4dp</dimen>
+    <dimen name="drawerHeight">240dip</dimen>
+</resources>

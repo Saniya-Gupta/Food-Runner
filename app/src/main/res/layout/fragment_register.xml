@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/imgSizeLarge"
+            android:layout_height="@dimen/imgSizeLarge"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/app_logo_black" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogo"
+            android:layout_marginHorizontal="@dimen/et_marginHorizontal"
+            android:layout_marginTop="@dimen/marginLarge"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_action_primary_person"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etName"
+            android:layout_marginHorizontal="@dimen/et_marginHorizontal"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_action_primary_add"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/etNum"
+            style="@style/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEmail"
+            android:layout_marginHorizontal="@dimen/et_marginHorizontal"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_action_primary_mobile"
+            android:hint="@string/num"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/etAdd"
+            style="@style/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etNum"
+            android:layout_marginHorizontal="@dimen/et_marginHorizontal"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_action_primary_add"
+            android:hint="@string/add"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etPass"
+            style="@style/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etAdd"
+            android:layout_marginHorizontal="@dimen/et_marginHorizontal"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_action_primary_pass"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/etConfirmPass"
+            style="@style/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPass"
+            android:layout_marginHorizontal="@dimen/et_marginHorizontal"
+            android:autofillHints=""
+            android:drawableStart="@drawable/ic_action_primary_pass"
+            android:hint="@string/confirm_pass"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:text="@string/register" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

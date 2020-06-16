@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <!--app:actionViewClass="androidx.appcompat.widget.SearchView"-->
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/ic_action_light_search"
+            android:title="@string/search_restaurant"
+            app:showAsAction="ifRoom|collapseActionView" />
+
+        <item
+            android:id="@+id/action_sort_ratings"
+            android:title="@string/ratings"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_sort_cost"
+            android:title="@string/cost_person"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_sort_cost_name"
+            android:title="@string/alphabetically"
+            app:showAsAction="never" />
+    </group>
+</menu>

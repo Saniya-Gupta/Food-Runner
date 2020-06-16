@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_profile">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhiteTransparent"
+        android:padding="@dimen/padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33">
+
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/imgSizeSmall"
+            android:layout_height="@dimen/imgSizeSmall"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/bg_img_primary"
+            android:contentDescription="@string/imgForEmptyLayout"
+            android:src="@drawable/ic_action_primary_person" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgProfile"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/font_head"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txtSize"
+            android:textStyle="bold"
+            tools:text="Charlotte Gupta" />
+
+        <TextView
+            android:id="@+id/txtNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="end"
+            android:fontFamily="@font/font_body"
+            android:paddingHorizontal="@dimen/padding"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            tools:text="+91 9919921995" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNum"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:drawableStart="@drawable/ic_action_primary_email"
+                android:drawablePadding="@dimen/padding"
+                android:fontFamily="@font/font_body"
+                android:padding="@dimen/padding"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txtSizeSmall"
+                tools:text="cse.18bcs2293@gmail.com" />
+
+            <TextView
+                android:id="@+id/txtAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_primary_add"
+                android:drawablePadding="@dimen/padding"
+                android:fontFamily="@font/font_body"
+                android:padding="@dimen/padding"
+                android:textColor="@color/colorBlack"
+                tools:text="Kanpur - 208027" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
