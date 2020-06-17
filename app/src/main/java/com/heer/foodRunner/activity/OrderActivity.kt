@@ -42,9 +42,11 @@ class OrderActivity : AppCompatActivity() {
                     .setMessage("Order items will be discarded.\nDo you still want to continue?")
                     .setPositiveButton("No") { _, _ -> }
                     .setNegativeButton("Yes") { _, _ ->
-                        supportFragmentManager.popBackStack()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.frameLayout, MenuFragment()).commit()
                     }
                     .create().show()
+
             }
             is OrderSuccessFragment -> finish()
             else -> super.onBackPressed()

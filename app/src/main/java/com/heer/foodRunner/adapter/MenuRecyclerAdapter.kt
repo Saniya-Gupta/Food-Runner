@@ -49,21 +49,13 @@ class MenuRecyclerAdapter(
         holder.txtItemName.text = foodItem.foodItemsName
         val money = "Rs. ${foodItem.foodItemsCostPerPerson}"
         holder.txtItemCost.text = money
-        val orderEntity = OrderEntity(
-            foodItem.foodItemsId,
-            foodItem.foodItemsName,
-            foodItem.foodItemsCostPerPerson
-        )
-
-        /*if (OrderDb(context.applicationContext, orderEntity, 3).execute().get()) {
-            holder.btnAddToCart.setBackgroundResource(R.color.colorPrimary)
-            holder.btnAddToCart.text = context.getString(R.string.add_to_cart)
-        } else {
-            holder.btnAddToCart.setBackgroundResource(R.color.colorGreen)
-            holder.btnAddToCart.text = context.getString(R.string.remove_from_cart)
-        }*/
 
         holder.btnAddToCart.setOnClickListener {
+            val orderEntity = OrderEntity(
+                foodItem.foodItemsId,
+                foodItem.foodItemsName,
+                foodItem.foodItemsCostPerPerson
+            )
             if (OrderDb(context.applicationContext, orderEntity, 3).execute().get()) {
                 if (OrderDb(context.applicationContext, orderEntity, 1).execute().get()) { // Insert
                     holder.btnAddToCart.setBackgroundResource(R.color.colorGreen)
@@ -101,9 +93,9 @@ class MenuRecyclerAdapter(
                     return true
                 }
                 3 -> {
-                    db.orderDao().getOrderItemById(orderEntity.orderItemId)
+                    val a = db.orderDao().getOrderItemById(orderEntity.orderItemId)
                     db.close()
-                    return true
+                    return a == 0
                 }
             }
             return false

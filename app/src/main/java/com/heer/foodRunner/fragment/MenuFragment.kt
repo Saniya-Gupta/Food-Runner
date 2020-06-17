@@ -65,7 +65,7 @@ class MenuFragment : Fragment() {
     private fun proceedToCartPage() {
         val activity: AppCompatActivity = context as AppCompatActivity
         activity.supportFragmentManager.beginTransaction().replace(R.id.frameLayout, CartFragment())
-            .addToBackStack("MenuFragment").commit()
+            .commit()
         progressLayout.visibility = View.GONE
     }
 
@@ -95,20 +95,6 @@ class MenuFragment : Fragment() {
                                 menuList.add(menuItem)
                             }
 
-                            /*
-                            This code is used to maintain same instance when user presses back button.
-                            Also Empty Orders in RestaurantRecyclerAdapter on holder click. Line commented for now.
-
-                            orderList.addAll(CartFragment.GetOrders(activity!!.applicationContext)
-                                    .execute().get())
-                            if(orderList.isNotEmpty()) {
-                                println("Here made visible 1")
-                                btnProceedToCart.visibility = View.VISIBLE
-                            }
-                            else
-                                btnProceedToCart.visibility = View.GONE
-                            */
-
                             recyclerAdapter =
                                 MenuRecyclerAdapter(
                                     activity as Context,
@@ -136,6 +122,7 @@ class MenuFragment : Fragment() {
                                                     menuItems.foodItemsCostPerPerson
                                                 )
                                             )
+                                            println(orderList.isEmpty())
                                             if (orderList.isEmpty())
                                                 btnProceedToCart.visibility = View.GONE
                                         }

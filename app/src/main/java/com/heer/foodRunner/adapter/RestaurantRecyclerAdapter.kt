@@ -6,8 +6,6 @@ import android.os.AsyncTask
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -22,40 +20,8 @@ import com.heer.foodRunner.database.RestaurantDatabase
 import com.heer.foodRunner.database.RestaurantEntity
 import com.squareup.picasso.Picasso
 
-@Suppress("UNCHECKED_CAST")
 class RestaurantRecyclerAdapter(val context: Context, private var itemList: List<Restaurant>) :
-    RecyclerView.Adapter<RestaurantRecyclerAdapter.RecyclerViewHolder>(), Filterable {
-
-    val filteredList = itemList
-
-    private val filter = object : Filter() {
-
-        // Background Thread: Logic of Filtering
-        override fun performFiltering(constraint: CharSequence?): FilterResults {
-            val filterResults = FilterResults()
-            if (constraint.toString().isNotEmpty() && constraint != null) {
-                val newList = arrayListOf<Restaurant>()
-                for (i in itemList) {
-                    if (i.restaurantName.contains(constraint.toString(), ignoreCase = true)) {
-                        newList.add(i)
-                    }
-                }
-                filterResults.values = newList
-            } else
-                filterResults.values = filteredList
-            return filterResults
-        }
-
-        // UI Thread
-        override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-            // Cast is safe
-            itemList = results?.values as List<Restaurant>
-        }
-    }
-
-    override fun getFilter(): Filter {
-        return filter
-    }
+    RecyclerView.Adapter<RestaurantRecyclerAdapter.RecyclerViewHolder>() {
 
     class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val txtRestaurantName: TextView = view.findViewById(R.id.txtRestaurantName)

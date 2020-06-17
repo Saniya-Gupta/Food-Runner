@@ -38,9 +38,9 @@ class FavouriteRestaurantFragment : Fragment() {
 
     private fun setContent() {
         val favRestaurantList = DbAsyncTask(activity as Context).execute().get()
+        val restaurantList = arrayListOf<Restaurant>()
         if (favRestaurantList.isNotEmpty()) {
             progressLayout.visibility = View.INVISIBLE
-            val restaurantList = arrayListOf<Restaurant>()
             for (i in favRestaurantList) {
                 restaurantList.add(
                     Restaurant(
@@ -52,13 +52,13 @@ class FavouriteRestaurantFragment : Fragment() {
                     )
                 )
             }
-            recyclerAdapter = RestaurantRecyclerAdapter(activity as Context, restaurantList)
-            recyclerFav.adapter = recyclerAdapter
-            recyclerFav.layoutManager = layoutManager
         } else {
             progressLayout.visibility = View.INVISIBLE
             constraintLayout.visibility = View.VISIBLE
         }
+        recyclerAdapter = RestaurantRecyclerAdapter(activity as Context, restaurantList)
+        recyclerFav.adapter = recyclerAdapter
+        recyclerFav.layoutManager = layoutManager
     }
 
     private fun init(view: View) {
@@ -76,5 +76,10 @@ class FavouriteRestaurantFragment : Fragment() {
                 .fallbackToDestructiveMigration().build()
             return db.restaurantDao().getAllRestaurants()
         }
+    }
+
+    override fun onResume() {
+        setContent()
+        super.onResume()
     }
 }
