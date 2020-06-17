@@ -73,10 +73,8 @@ class HomeFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        if (item.itemId != R.id.search) {
-            item.isCheckable = true
-            item.isChecked = true
-        }
+        item.isCheckable = true
+        item.isChecked = true
 
         when (item.itemId) {
             R.id.action_sort_ratings -> {
@@ -92,8 +90,9 @@ class HomeFragment : Fragment() {
                 Collections.sort(restaurantInfoList, nameComparator)
                 recyclerAdapter.notifyDataSetChanged()
             }
+            /*
             R.id.search -> {
-                /*// Search feature using filter in Adapter
+                // Search feature using filter in Adapter
                 val searchView: SearchView = item.actionView as SearchView
                 item.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
                     override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
@@ -115,9 +114,10 @@ class HomeFragment : Fragment() {
                         recyclerAdapter.notifyDataSetChanged()
                         return true
                     }
-                })*/
+                })
                 Toast.makeText(activity as Context, "Clicked on Search", Toast.LENGTH_SHORT).show()
             }
+            */
         }
         return super.onOptionsItemSelected(item)
     }

@@ -4,12 +4,14 @@
 
     <group android:checkableBehavior="single">
 
-        <!--app:actionViewClass="androidx.appcompat.widget.SearchView"-->
+<!--
         <item
             android:id="@+id/search"
             android:icon="@drawable/ic_action_light_search"
             android:title="@string/search_restaurant"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
             app:showAsAction="ifRoom|collapseActionView" />
+-->
 
         <item
             android:id="@+id/action_sort_ratings"

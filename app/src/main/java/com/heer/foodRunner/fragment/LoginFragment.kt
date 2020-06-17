@@ -90,7 +90,6 @@ class LoginFragment : Fragment() {
                     Method.POST, LOGIN, jsonObj,
                     Response.Listener {
                         try {
-                            progressLayout.visibility = View.GONE
                             val resObj = it.getJSONObject("data")
                             val resSuccess = resObj.getBoolean("success")
                             if (resSuccess) {
@@ -111,6 +110,7 @@ class LoginFragment : Fragment() {
                                 startActivity(Intent(this.activity, MainActivity::class.java))
                                 this.activity?.finish()
                             } else {
+                                progressLayout.visibility = View.GONE
                                 Toast.makeText(
                                     activity as Context,
                                     "Invalid login details",
